@@ -9,10 +9,10 @@
     bst.insert(95)
     bst.insert(65)
 ```
-![Вывод изображения дерева программой](before_remove_graph.jpg)
+![Вывод изображения дерева программой](/pics/before_remove_graph.jpg)
 
 После удаления одного из объектов:
 ```python
     bst.delete_node(60)
 ```
-![Вывод изображения дерева программой](after_remove_graph.jpg)
+![Вывод изображения дерева программой](/pics/after_remove_graph.jpg)
