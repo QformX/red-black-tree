@@ -21,10 +21,9 @@ def render_red_black_tree(node, x, y, dx):
         render_red_black_tree(node.right, x + dx, y - dy, dx/2)
 
 
-def draw_tree(node, x, y, dx, pic_name):
-    plt.figure(figsize=(10, 10))
+def draw_tree(node, x, y, dx):
+    fig = plt.figure(figsize=(10, 10))
     plt.axis('off')
     render_red_black_tree(node, x, y, dx)
-    plt.savefig(pic_name)
-    plt.show()
+    return fig
 
