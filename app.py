@@ -14,7 +14,7 @@ if __name__ == "__main__":
     dx = 50  # горизонтальное расстояние между узлами
     dy = 1  # вертикальное расстояние между уровнями
 
-    draw_tree(bst.root, 0, 0, dx, "before_remove_graph.jpg")
+    draw_tree(bst.root, 0, 0, dx, "pics/before_remove_graph.jpg")
     print("\nAfter deleting an element")
     bst.delete_node(60)
-    draw_tree(bst.root, 0, 0, dx, "after_remove_graph.jpg")
+    draw_tree(bst.root, 0, 0, dx, "pics/after_remove_graph.jpg")
