@@ -7,12 +7,17 @@ import numpy as np
 empty_tree = RedBlackTree()
 
 def insert_nodes(args):
+    if empty_tree.search(int(args)) is not None:
+        print('Элемент с таким значением уже существует.')
+        return draw_tree(empty_tree.root, 0, 0, 50)
+        
     for item in args.split(','):
-        empty_tree.insert(item)
+        empty_tree.insert(int(item))
     return draw_tree(empty_tree.root, 0, 0, 50)
 
 def delete_nodes(args):
     for item in args.split(','):
+        item = int(item)
         empty_tree.delete_node(item)
     return draw_tree(empty_tree.root, 0, 0, 50)
     

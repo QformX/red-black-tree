@@ -270,9 +270,19 @@ class RedBlackTree():
             return
  
         self.fix_insert(node)
- 
-    def get_root(self):
-        return self.root
+    
+
+    def search(self, value):
+        return self._search_recursive(self.root, value)
+
+    def _search_recursive(self, root, value):
+        if root is None or root.item == value:
+            return root
+        if root.item < value:
+            return self._search_recursive(root.right, value)
+        return self._search_recursive(root.left, value)
+
+            
  
     def delete_node(self, item):
         self.delete_node_helper(self.root, item)
